@@ -20,3 +20,13 @@ model.compile({
     optimizer: sgdOpt,
     loss: 'meanSquaredError'
 })
+
+const inputs = tf.tensor2d([
+    [0.25, 0.92],
+    [0.12, 0.3],
+    [0.4, 0.74],
+    [0.1, 0.22]
+])
+
+let outputs = model.predict(inputs)
+outputs.print()
